@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>Google Map API Sample</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+	</head>
+	<body>
+		<div id="map" class="map"></div>
+		
+		<div class="button-panel">
+			<ol>
+				<li>
+					<input type="button" id="change-location" value="Change Location" onclick="changeLocation()" />
+				</li>
+				<li>
+					<input type="button" id="adjust-zoom" value="Adjust Zoom" onclick="adjustZoom()" />
+				</li>
+				<li>
+					<input type="button" id="drop-style-marker" value="Drop Style Marker" onclick="dropCustomMarker()" />
+
+					<label>Style : </label>
+					<select id="style-selector">
+						<option value="default">Default</option>
+						<option value="dot">Dot</option>
+					</select>
+
+					<label>Colour : </label>
+					<select id="colour-selector">
+						<option value="purple">Purple</option>
+						<option value="yellow">Yellow</option>
+						<option value="blue">Blue</option>
+						<option value="green">Green</option>
+						<option value="red">Red</option>
+						<option value="orange">Orange</option>
+					</select>
+
+					<label>Number : </label>
+					<select id="number-selector">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+					</select>
+				</li>
+				<li>
+					<input type="button" id="drop-mouse-marker" value="Drop Mouse Marker" onclick="dropMouseEventMarker()" />
+
+					<label>Mouse Event : </label>
+					<select id="event-selector">
+						<option value="mouseover">Mouse Over</option>
+						<option value="mouseout">Mouse Out</option>
+						<option value="mousedown">Mouse Down</option>
+						<option value="mouseup">Mouse Up</option>
+					</select>
+				</li>
+				<li>
+					<input type="button" id="add-weather-info" value="Add Weather Info" onclick="addWeatherInfo()" />
+
+					<label>Weather : </label>
+					<select id="weather-selector">
+						<option value="sunny">Sunny</option>
+						<option value="cloudy">Cloudy</option>
+						<option value="rainy">Rainy</option>
+						<option value="stormy">Stormy</option>
+						<option value="snowy">Snowy</option>
+					</select>
+
+					<label>Window Title : </label>
+					<input type="text" id="weather-title" placeholder="Type in a title for the content." />
+
+					<br><br>
+
+					<textarea id="weather-description" placeholder="Type in a description."></textarea>
+
+					<br><br>
+
+					<label>YouTube Video ID : </label>
+					<input type="text" id="video-id" class="video-id" placeholder="Enter the YouTube video ID." />
+				</li>
+				<li>
+					<input type="button" id="add-detailed-map" value="Add Detailed Map" onclick="addDetailedMap()" />
+					<label>Colour : </label>
+					<select id="region-colour">
+						<option value="red">Red</option>
+						<option value="green">Green</option>
+						<option value="blue">Blue</option>
+					</select>
+
+					<br><br>
+
+					<div id="nodal-points">
+						<label>Nodal Point : </label>
+						<input id="lat-0" type="Number" placeholder="Lattitude" />
+						<input id="lng-0" type="Number" placeholder="Longitude" />
+					
+						<br><br>
+
+						<label>Nodal Point : </label>
+						<input id="lat-1" type="Number" placeholder="Lattitude" />
+						<input id="lng-1" type="Number" placeholder="Longitude" />
+						
+						<br><br>
+
+						<label>Nodal Point : </label>
+						<input id="lat-2" type="Number" placeholder="Lattitude" />
+						<input id="lng-2" type="Number" placeholder="Longitude" />
+
+						<br><br>
+					</div>
+
+					<input type="button" id="add-nodal-point" value="Add Another" onclick="addNewNodalPoint()" />
+				</li>
+				<li>
+					<input type="button" id="multi-zoom" value="Multi Level Zoom" onclick="multiLevelZoom()" />
+				</li>
+			</ol>
+		</div>
+		
+		<div id="inner-map" class="map"></div>
+
+		<footer>
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQjT_XH1CUuyQOKCwREcQzot104Xk1BMQ"></script>
+			<script type="text/javascript" src="index.js"></script>
+		</footer>
+	</body>
+</html>
